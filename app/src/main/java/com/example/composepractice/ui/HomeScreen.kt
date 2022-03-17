@@ -5,17 +5,14 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.Icon
-import androidx.compose.material.Text
-import androidx.compose.material.TextField
-import androidx.compose.material.TextFieldDefaults
+import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.*
 import androidx.compose.material.icons.sharp.AccountCircle
 import androidx.compose.material.icons.sharp.DateRange
 import androidx.compose.material.icons.sharp.Email
 import androidx.compose.material.icons.sharp.MailOutline
-import androidx.compose.runtime.Composable
+import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -34,9 +31,11 @@ import com.example.composepractice.util.Utils
 @Composable
 fun HomeScreen() {
 
-    Box(modifier = Modifier.fillMaxSize()
-        .background(Color.White,
-            ),contentAlignment = Alignment.BottomCenter){
+    Box(modifier = Modifier
+        .fillMaxSize()
+        .background(
+            Color.White,
+        ),contentAlignment = Alignment.BottomCenter){
 
         Column(
             modifier = Modifier
@@ -193,7 +192,9 @@ fun MiddleUI() {
     Row(
         horizontalArrangement = Arrangement.SpaceEvenly,
         verticalAlignment = Alignment.CenterVertically,
-        modifier = Modifier.fillMaxWidth().padding(top = 24.dp)
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(top = 24.dp)
     ) {
         Box(
             modifier = Modifier
@@ -254,6 +255,10 @@ fun MiddleUI() {
 }
 
 
+
+
+
+
 @Composable
 fun BottomUI() {
 
@@ -262,9 +267,12 @@ fun BottomUI() {
         Box(modifier = Modifier
             .fillMaxWidth()
             .height(45.dp)
-            .background(Color.White).align(Alignment.BottomCenter)){
+            .background(Color.White)
+            .align(Alignment.BottomCenter)){
             Row(horizontalArrangement = Arrangement.SpaceEvenly,
-                modifier = Modifier.fillMaxWidth().align(Alignment.BottomCenter)
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .align(Alignment.BottomCenter)
             ) {
 
                 Row(){
@@ -315,7 +323,11 @@ fun BottomUI() {
         }
 
 
-        Box(modifier = Modifier.padding(bottom=8.dp).size(60.dp).clip(CircleShape).background(Utils.getColor("73c1ff")),
+        Box(modifier = Modifier
+            .padding(bottom = 8.dp)
+            .size(60.dp)
+            .clip(CircleShape)
+            .background(Utils.getColor("73c1ff")),
         contentAlignment = Alignment.Center){
 
             Icon(
